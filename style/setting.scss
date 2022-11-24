@@ -1,0 +1,234 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* One */
+.container-box {
+  width: 1230px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* Two */
+@media (max-width: 1240px) {
+  .container-box {
+    width: 1023px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* Three */
+@media (max-width: 1240px) and (max-width: 1023px) {
+  .container-box {
+    width: 708px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* Four */
+@media (max-width: 1240px) and (max-width: 1023px) and (max-width: 767px) {
+  .container-box {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+//Размеры экранов
+
+//@media (max-width: 350px)
+// @include nxxs {}
+
+//@media (max-width: 767px)
+// @include nsm {}
+
+//@media (max-width: 1023px)
+// @include nmd {}
+
+//@media (max-width: 1239px)
+// @include nlg {}
+
+//@media (max-width: 1420px)
+// @include nlgm {}
+
+//@media (max-width: 1920px)
+// @include nlgxx {}
+
+$bigScreen-media: 2100px;
+$middleScreen-media: 1800px;
+$fullScreen-media: 1250px;
+$lg-media: 1200px;
+$md-media: 1024px;
+$mmd-media: 960px;
+$sm-media: 780px;
+$smm-media: 600px;
+$xs-media: 540px;
+$xxs-media: 450px;
+
+@mixin nlgxx {
+  @media all and (max-width: 1920px) {
+    @content;
+  }
+}
+@mixin nlgx {
+  @media all and (max-width: 1699px) {
+    @content;
+  }
+}
+@mixin nlgm {
+  @media all and (max-width: 1420px) {
+    @content;
+  }
+}
+@mixin nlg {
+  @media all and (max-width: 1239px) {
+    @content;
+  }
+}
+@mixin nlgs {
+  @media all and (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin nmd {
+  @media all and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin nsm {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin nxs {
+  @media all and (max-width: 450px) {
+    @content;
+  }
+}
+@mixin nxxs {
+  @media all and (max-width: 350px) {
+    @content;
+  }
+}
+@mixin bigScreen {
+  @media (min-width: #{$bigScreen-media}) {
+    @content;
+  }
+}
+@mixin middleScreen {
+  @media (max-width: #{$middleScreen-media}) {
+    @content;
+  }
+}
+@mixin fullScreen {
+  @media (max-width: #{$fullScreen-media}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: #{$lg-media}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: #{$md-media}) {
+    @content;
+  }
+}
+@mixin mmd {
+  @media (max-width: #{$mmd-media}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: #{$sm-media}) {
+    @content;
+  }
+}
+@mixin smm {
+  @media (max-width: #{$smm-media}) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: #{$xs-media}) {
+    @content;
+  }
+}
+@mixin xxs {
+  @media (max-width: #{$xxs-media}) {
+    @content;
+  }
+}
